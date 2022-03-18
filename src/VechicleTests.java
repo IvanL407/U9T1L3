@@ -115,6 +115,30 @@ public class VechicleTests
     System.out.println(testTaxi2.getTollFee());
     System.out.println("-----------");
 
+    System.out.println("--- Testing method on Truck objects ---");
+    Truck testTruck1 = new Truck("7645MX", 10.50, 3, 7, true);
+    boolean validLicensePlate = testTruck1.validateLicensePlate();
+    System.out.println(validLicensePlate);
+    System.out.println("-----------");
+    Truck testTruck2 = new Truck("7645PX", 10.50, 3, 7, true);
+    validLicensePlate = testTruck2.validateLicensePlate();
+    System.out.println(validLicensePlate);
+    System.out.println("-----------");
+    Truck testTruck3 = new Truck("7645LX", 10.50, 3, 4, true);
+    validLicensePlate = testTruck3.validateLicensePlate();
+    System.out.println(validLicensePlate);
+    System.out.println("-----------");
+    Truck testTruck4 = new Truck("7645L9", 10.50, 3, 4, true);
+    validLicensePlate = testTruck4.validateLicensePlate();
+    System.out.println(validLicensePlate);
+    System.out.println("-----------");
+    Truck testTruck5 = new Truck("7645L9", 10.50, 3, 4, false);
+    validLicensePlate = testTruck5.validateLicensePlate();
+    System.out.println(validLicensePlate);
+    System.out.println("-----------");
+    Truck testTruck6 = new Truck("7645PX", 10.50, 3, 7, false);
+    validLicensePlate = testTruck6.validateLicensePlate();
+    System.out.println(validLicensePlate);
 
   }
 }

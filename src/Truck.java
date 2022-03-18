@@ -18,4 +18,16 @@ public class Truck extends Vehicle
     System.out.println("Number of axles: " + axles);
     System.out.println("Has trailer? " + hasTrailer);
   }
+
+  public boolean validateLicensePlate()
+  {
+    if (hasTrailer)
+    {
+      String licensePlate = getLicensePlate();
+      String lastTwo = licensePlate.substring(licensePlate.length() - 2);
+      boolean isValid = (lastTwo.equals("MX") && axles > 4 || lastTwo.equals("LX") && axles <= 4);
+      return isValid;
+    }
+    return true;
+  }
 }
